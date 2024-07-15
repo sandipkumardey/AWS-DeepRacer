@@ -21,17 +21,6 @@ Say the DeepRacer car (agent) is approaching a corner. The algorithm queries the
 
 
 
-### Training Algorithms-
-
-The first thing to point out is that AWS DeepRacer uses both PPO and SAC algorithms to train stochastic policies. So they are similar in that regard.
-
-- **PPO** uses **“on-policy” learning**. This means it learns only from observations made by the current policy exploring the environment - using the most recent and relevant data. Say you are learning to drive a car, on-policy learning would be analogous to you reviewing a video of your most recent lesson and taking note of what you did well, and what needs improvement.
-- In contrast, **SAC** uses **“off-policy” learning.** This means it can use observations made from previous policies and exploration of the environment - so it can also use old data.
-
-"There is no right or wrong answer. SAC and PPO are two algorithms from a field that is constantly evolving and growing. Both have their benefits and either one could work best depending on the circumstance."
-
-
-
 ### Reward Functions-
 
 ![Untitled-4](https://github.com/user-attachments/assets/52b66438-bf6e-4841-80d5-818b755494ee)
@@ -41,3 +30,13 @@ In order to calculate an appropriate reward you need information about the state
 There are over 20 parameters available for use, and the reward function is simply a piece of code that uses the input parameters to do some calculations and then output a number, which is the reward.
 
 - The reward function is written in Python as a standard function, but it must be called *reward_function* with a single parameter - which is a Python dictionary containing all the input parameters provided by the AWS DeepRacer system.
+
+
+### Training Algorithms-
+
+The first thing to point out is that AWS DeepRacer uses both PPO and SAC algorithms to train stochastic policies. So they are similar in that regard.
+
+- **PPO** uses **“on-policy” learning**. This means it learns only from observations made by the current policy exploring the environment - using the most recent and relevant data. Say you are learning to drive a car, on-policy learning would be analogous to you reviewing a video of your most recent lesson and taking note of what you did well, and what needs improvement.
+- In contrast, **SAC** uses **“off-policy” learning.** This means it can use observations made from previous policies and exploration of the environment - so it can also use old data.
+
+"There is no right or wrong answer. SAC and PPO are two algorithms from a field that is constantly evolving and growing. Both have their benefits and either one could work best depending on the circumstance."
