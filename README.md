@@ -5,6 +5,8 @@
 ### Best time: 01:19.866 Latest*
 (Qualifying model submitted- SpeedRacer-V1-clone)
 
+https://github.com/user-attachments/assets/8585ed54-93dd-4955-ab4a-8a4881f1a65f
+
 
 
 
