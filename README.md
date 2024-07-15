@@ -2,6 +2,12 @@
 
 ## Applying reinforcement learning to AWS DeepRacer
 
+### Best time: 01:19.866 Latest*
+(Qualifying model submitted- SpeedRacer-V1-clone)
+
+
+
+
 A policy defines the action that the agent should take for a given state. This could conceptually be represented as a table - given a particular state, perform this action.
 
 - **A deterministic policy,** where there is a direct relationship between state and action. This is often used when the agent has a full understanding of the environment and, given a state, always performs the same action.
@@ -13,6 +19,8 @@ A **Value function,** think of this as looking ahead into the future and figurin
 
 Say the DeepRacer car (agent) is approaching a corner. The algorithm queries the policy about what to do, and it says to accelerate hard. The algorithm then asks the value function how good it thinks that decision was - but unfortunately, the results are not too good, as it’s likely the agent will go off-track in the future due to his hard acceleration into a corner. As a result, the value is low and the probabilities of that action can be adjusted to discourage the selection of the action and getting into this state.
 
+
+
 ### Training Algorithms-
 
 The first thing to point out is that AWS DeepRacer uses both PPO and SAC algorithms to train stochastic policies. So they are similar in that regard.
@@ -22,7 +30,11 @@ The first thing to point out is that AWS DeepRacer uses both PPO and SAC algorit
 
 "There is no right or wrong answer. SAC and PPO are two algorithms from a field that is constantly evolving and growing. Both have their benefits and either one could work best depending on the circumstance."
 
+
+
 ### Reward Functions-
+
+![Untitled-4](https://github.com/user-attachments/assets/52b66438-bf6e-4841-80d5-818b755494ee)
 
 In order to calculate an appropriate reward you need information about the state of the agent and perhaps even the environment. These are provided to you by the AWS DeepRacer system in the form of **input parameters** - in other words, they are parameters for input into your reward function.
 
